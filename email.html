@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HR Email Response Tool</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>HR Email Response Generator</h2>
+
+        <form action="/preview" method="post">
+            <input type="text" name="name" placeholder="HR Name" required>
+            <input type="text" name="position" placeholder="Job Position" required>
+            <input type="text" name="company" placeholder="Company Name" required>
+
+            <select name="response" required>
+                <option value="">Select Response</option>
+                <option value="accept">Accept Offer</option>
+                <option value="reject">Decline Offer</option>
+            </select>
+
+            <button type="submit">Generate Email</button>
+        </form>
+    </div>
+</body>
+</html>
